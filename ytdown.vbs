@@ -22,7 +22,7 @@ Dim Args: Set Args = WScript.Arguments
 
 If Args.Count = 0 And WScriptMode Then
     ' If running in WScript and no command line args are provided
-    ' ask the user for a URL to a YouTube video
+    ' ask the user for a URL to the YouTube video
     Dim Url: Url = InputBox("Enter a YouTube video URL to download" & vbCrLf & _
                    "For example, http://youtube.com/watch?v=G1ynTV_E-5s", _
                    "YouTube Downloader, http://www.catonmat.net")
@@ -31,7 +31,7 @@ If Args.Count = 0 And WScriptMode Then
 ElseIf Args.Count = 0 And Not WScriptMode Then
     ' If running in CScript and no command line args are provided
     ' show the usage and quit
-    WScript.Echo "Usage: " & WScript.ScriptName & " <video url 1> [video url 3] ..."
+    WScript.Echo "Usage: " & WScript.ScriptName & " <video url 1> [video url 2] ..."
     WScript.Quit 1
 Else 
     ' Download all videos
